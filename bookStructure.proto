@@ -1,0 +1,23 @@
+syntax = "proto3";
+package books;
+
+
+message Books {
+    int32 id = 1;
+    string title = 2;
+    int32 page_number = 3;
+    string isbn  = 4;
+    string category = 5;
+
+    enum BookType {
+        PDF = 0;
+        EPUD = 1;
+        EBOOK = 2;
+    }
+
+    message Author {
+        string name = 1;
+        string username = 2;
+        string email = 3;
+    }
+}
